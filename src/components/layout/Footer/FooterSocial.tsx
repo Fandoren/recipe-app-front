@@ -1,6 +1,6 @@
 export default function FooterSocial() {
   return (
-    <div className="flex mt-4 justify-center sm:mt-0">
+    <div className="flex mt-4 flex items-center justify-center sm:mt-0">
       <a href="#" className="text-primary-foreground hover:text-darkblue">
         <svg
           className="w-10 h-10"

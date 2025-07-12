@@ -1,9 +1,9 @@
-import AuthFormLayout from "@/layouts/AuthFormLayout";
+import AuthFormLayout from "@/components/layout/auth/AuthFormLayout";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import { LoginSchema } from "@/schemas/LoginSchema";
+import { LoginSchema } from "@/schemas/auth/LoginSchema";
 import {
   Form,
   FormControl,

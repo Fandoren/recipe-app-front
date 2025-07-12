@@ -1,6 +1,6 @@
-import Recipes from "@/pages/recipes/Recipes";
+import Recipes from "@/routes/recipes/Recipes";
 import { Route, Routes } from "react-router-dom";
-import Login from "@/pages/auth/Login";
+import Login from "@/routes/auth/Login";
 
 export default function AppRouter() {
   return (
