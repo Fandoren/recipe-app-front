@@ -3,7 +3,7 @@ export default function NavBarLogo() {
     <a className="col-span-2 text-center content-center">
       <span
         className="text-4xl font-semibold whitespace-nowrap 
-      text-primary-foreground dark:text-primary"
+      text-foreground dark:text-primary"
       >
         Рецептовик
       </span>

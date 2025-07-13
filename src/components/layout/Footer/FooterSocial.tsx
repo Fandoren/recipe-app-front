@@ -1,7 +1,11 @@
 export default function FooterSocial() {
   return (
     <div className="flex mt-4 flex items-center justify-center sm:mt-0">
-      <a href="#" className="text-primary-foreground hover:text-darkblue">
+      <a
+        href="#"
+        className="hover:text-primary dark:hover:text-accent-foreground 
+        text-foreground dark:text-primary"
+      >
         <svg
           className="w-10 h-10"
           aria-hidden="true"
@@ -13,7 +17,11 @@ export default function FooterSocial() {
         </svg>
         <span className="sr-only">Почтовый адрес</span>
       </a>
-      <a href="#" className="text-primary-foreground hover:text-darkblue ms-5">
+      <a
+        href="#"
+        className="hover:text-primary dark:hover:text-accent-foreground 
+        text-foreground dark:text-primary ms-5"
+      >
         <svg
           className="w-10 h-10"
           aria-hidden="true"
@@ -26,7 +34,11 @@ export default function FooterSocial() {
 
         <span className="sr-only">Канал Telegram</span>
       </a>
-      <a href="#" className="text-primary-foreground hover:text-darkblue ms-5">
+      <a
+        href="#"
+        className="hover:text-primary dark:hover:text-accent-foreground 
+        text-foreground dark:text-primary ms-5"
+      >
         <svg
           className="w-10 h-10"
           aria-hidden="true"

@@ -13,8 +13,8 @@ export default function NavBarLink(props: NavBarLink) {
       <a
         href="#"
         className="block py-2 px-3 text-xl 
-        hover:text-darkblue dark:hover:text-accent-foreground 
-        text-primary-foreground dark:text-primary"
+        hover:text-primary dark:hover:text-accent-foreground 
+        text-foreground dark:text-primary"
         aria-current="page"
         onClick={() => navigate(props.path)}
       >

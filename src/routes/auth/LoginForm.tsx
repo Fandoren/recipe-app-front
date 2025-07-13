@@ -35,16 +35,22 @@ const LoginForm = function () {
         footerAddress="/register"
       >
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 w-3/4">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="space-y-6 w-3/4"
+          >
             <div className="space-y-4">
               <FormField
                 control={form.control}
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Номер телефона или почта</FormLabel>
+                    <FormLabel className="text-card-foreground">
+                      Номер телефона или почта
+                    </FormLabel>
                     <FormControl>
                       <Input
+                        className="border-primary"
                         {...field}
                         type="email"
                         placeholder="+7 (777) 77 77"
@@ -59,9 +65,16 @@ const LoginForm = function () {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Пароль</FormLabel>
+                    <FormLabel className="text-card-foreground">
+                      Пароль
+                    </FormLabel>
                     <FormControl>
-                      <Input {...field} type="password" placeholder="******" />
+                      <Input
+                        className="border-primary"
+                        {...field}
+                        type="password"
+                        placeholder="******"
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

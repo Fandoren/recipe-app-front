@@ -20,7 +20,7 @@ const AuthFormLayout = function ({
   footerAddress
 }: CardWrapperProps) {
   return (
-    <Card className="xl:w-1/3">
+    <Card className="xl:w-1/3 border-primary">
       <CardHeader className="text-center font-bold text-4xl">{title}</CardHeader>
       <CardContent className="flex justify-center">{children}</CardContent>
       <CardFooter>

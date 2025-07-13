@@ -34,7 +34,8 @@ export default function RecipeCard({
 
   return (
     <Card
-      className="overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl max-w-xs"
+      className="overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl max-w-xs
+      border-primary"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -44,18 +45,12 @@ export default function RecipeCard({
           alt={name}
           className={cn(
             "h-full w-full object-cover transition-all duration-300",
-            hovered ? "blur-sm scale-105" : ""
+            hovered ? "blur-md scale-105" : ""
           )}
         />
-        <div
-          className={cn(
-            "absolute inset-0 flex items-end p-4 transition-all duration-300",
-            hovered ? "items-start" : "items-end"
-          )}
-        ></div>
         {hovered && (
           <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-            <p className="text-white text-sm drop-shadow">{description}</p>
+            <p className="text-primary-foreground text-md text-shadow-md drop-shadow">{description}</p>
           </div>
         )}
       </div>
@@ -65,7 +60,7 @@ export default function RecipeCard({
         </h2>
         <div className="flex justify-around space-x-2 text-sm text-secondary-text">
           <span className="flex w-max">
-            <Dumbbell className="w-5 h-5 mx-1" />
+            <Dumbbell className="w-5 h-5 mx-1 text-primary" />
             {difficulty}
           </span>
           <div
@@ -74,7 +69,7 @@ export default function RecipeCard({
             className="shrink-0 bg-border w-[1px] mx-1 h-6"
           />
           <span className="flex w-max">
-            <Clock className="w-5 h-5 mx-1" />
+            <Clock className="w-5 h-5 mx-1 text-primary" />
             {cookTime}
           </span>
           <div
@@ -83,7 +78,7 @@ export default function RecipeCard({
             className="shrink-0 bg-border w-[1px] mx-1 h-6"
           />
           <span className="flex w-max">
-            <Star className="w-5 h-5 mx-1" />
+            <Star className="w-5 h-5 mx-1 text-primary" />
             {rating.toFixed(1)}
           </span>
         </div>

@@ -5,6 +5,7 @@ import NavBarLinkList from "./NavBarLinkList";
 import NavBarLogo from "./NavBarLogo";
 import { useNavigate } from "react-router-dom";
 import { ModeToggle } from "../theme-toggle/ModeToggle";
+import { Separator } from "@/components/ui/separator";
 
 export default function NavBar() {
 
@@ -12,7 +13,7 @@ export default function NavBar() {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-primary dark:bg-background">
+    <nav className="bg-background">
       <div className="grid grid-cols-12 p-4 py-2">
         <NavBarLogo></NavBarLogo>
         <NavBarHamburger></NavBarHamburger>
@@ -28,6 +29,7 @@ export default function NavBar() {
             : <Button onClick={() => navigate("/login")}>Войти</Button>}
         </div>
       </div>
+      <Separator/>
     </nav>
   );
 }
