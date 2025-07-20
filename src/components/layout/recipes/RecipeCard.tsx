@@ -3,10 +3,12 @@ import { Badge } from "@/components/ui/badge";
 import { Clock, Dumbbell, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface RecipeCardProps {
   imageUrl: string;
   name: string;
+  slugName: string;
   description: string;
   difficulty: string;
   cookTime: string;
@@ -17,12 +19,14 @@ interface RecipeCardProps {
 export default function RecipeCard({
   imageUrl,
   name,
+  slugName,
   description,
   difficulty,
   cookTime,
   rating,
   tags,
 }: RecipeCardProps) {
+  const navigate = useNavigate();
   const [hovered, setHovered] = useState(false);
 
   let shortenTagName = (tagName: string) => {
@@ -38,6 +42,7 @@ export default function RecipeCard({
       border-primary"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => navigate("/recipe/" + slugName)}
     >
       <div className="relative h-40">
         <img
