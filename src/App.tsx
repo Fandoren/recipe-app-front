@@ -8,7 +8,7 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <BrowserRouter>
-        <div className="flex flex-col h-dvh bg-background">
+        <div className="flex flex-col min-h-screen bg-background">
           <NavBar></NavBar>
           <div className="flex-grow">
             <AppRouter></AppRouter>

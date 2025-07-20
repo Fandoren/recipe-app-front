@@ -27,6 +27,50 @@ const LoginForm = function () {
     console.log(data);
   };
 
+  const emailField = (
+    <FormField
+      control={form.control}
+      name="email"
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel className="text-card-foreground">
+            Номер телефона или почта
+          </FormLabel>
+          <FormControl>
+            <Input
+              className="border-primary"
+              {...field}
+              type="email"
+              placeholder="+7 (777) 77 77"
+            />
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+
+  const passwordField = (
+    <FormField
+      control={form.control}
+      name="password"
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel className="text-card-foreground">Пароль</FormLabel>
+          <FormControl>
+            <Input
+              className="border-primary"
+              {...field}
+              type="password"
+              placeholder="******"
+            />
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+
   return (
     <div className="flex justify-center max-w-80% py-10">
       <AuthFormLayout
@@ -40,46 +84,8 @@ const LoginForm = function () {
             className="space-y-6 w-3/4"
           >
             <div className="space-y-4">
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-card-foreground">
-                      Номер телефона или почта
-                    </FormLabel>
-                    <FormControl>
-                      <Input
-                        className="border-primary"
-                        {...field}
-                        type="email"
-                        placeholder="+7 (777) 77 77"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="password"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-card-foreground">
-                      Пароль
-                    </FormLabel>
-                    <FormControl>
-                      <Input
-                        className="border-primary"
-                        {...field}
-                        type="password"
-                        placeholder="******"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              {emailField}
+              {passwordField}
             </div>
             <Button type="submit" className="w-full">
               Продолжить
